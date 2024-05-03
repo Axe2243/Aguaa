@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>awita suprema</title>
+  <link rel="stylesheet" href="agua-desli-CSS.html">
+
+</head>
+<body>
+<style></style>
+	
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel" style="height: 300px;">
+<img src="/img/s1.png" class="w-100 d-block" alt="..." height="400px;">
+
+  <div class="slider" x-data="{start: true, end: false}" style="padding-top: 150px;">
+    <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+      <div class="slider__item">
+        <a href="tipos de agua.html"><img class="slider__image" src="imag/agua3.jpg" alt="Image"></a>
+        <div class="slider__info">
+          <h2>Tipos de agua</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="composiciones y funciones.html"><img class="slider__image" src="imag/agua-com.jpg" alt="Image2"></a>
+        <div class="slider__info">
+          <h2>Composicion y Funciones</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="ciclo del agua.html"><img class="slider__image" src="imag/agua-ciclo.jpg" alt="Image"></a>
+        <div class="slider__info">
+          <h2>Ciclo del agua</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="reciclaje del agua.html"><img class="slider__image" src="imag/nature.jpg" alt="Image"></a>
+        <div class="slider__info">
+          <h2>Porque es importante reciclar el agua</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="Datos clave  sobre el agua.html"><img class="slider__image" src="imag/agua5.jpg" alt="Image"></a>
+        <div class="slider__info">
+          <h2>Datos sobre el agua</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="Causas de la escasez de agua.html"><img class="slider__image" src="imag/agua-escasez.jpg" alt="Image"></a>
+        <div class="slider__info">
+          <h2>Causas de escasez del agua</h2>
+        </div>
+      </div>
+      <div class="slider__item">
+        <a href="La contaminación de los recursos hídricos.html"><img class="slider__image" src="imag/agua-contaminacion.jpg" alt="Image"></a>
+        <div class="slider__info">
+          <h2>Contaminacion</h2>
+        </div>
+      </div>
+    </div>
+    <div class="slider__nav" style="display: flex;justify-content: center;">
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+      <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+</body>
+</html>
+
